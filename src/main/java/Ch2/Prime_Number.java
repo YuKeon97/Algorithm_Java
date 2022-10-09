@@ -1,0 +1,24 @@
+package Ch2;
+
+import java.util.Scanner;
+
+public class Prime_Number {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int n = sc.nextInt();
+        int[] num = new int[n+1];
+        int cnt = 0;
+
+        for (int i = 2; i <= n; i++) {
+            if (num[i] == 0) {
+                cnt++;
+                for (int j = i; j <= n; j = j+i) {
+                    num[j] = 1;
+                }
+            }
+        }
+
+        System.out.println(cnt);
+    }
+}
