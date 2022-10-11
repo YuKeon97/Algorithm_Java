@@ -22,7 +22,6 @@ public class Reverse_Certain_Word {
                 ri--;
                 li++;
             }
-
         }
         for(char x : ans) {
             System.out.print(x);
