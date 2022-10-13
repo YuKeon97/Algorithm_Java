@@ -10,7 +10,7 @@ public class Palindrome_String_7 {
 
         if (str.equals(tmp)) {
             System.out.println("YES");
-        }else{
+        } else {
             System.out.println("NO");
         }
     }
