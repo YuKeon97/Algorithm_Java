@@ -18,6 +18,5 @@ public class Word_in_String_3 {
             }
         }
         System.out.println(ans);
-
     }
 }
