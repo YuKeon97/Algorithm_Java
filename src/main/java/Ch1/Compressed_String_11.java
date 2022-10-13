@@ -48,6 +48,7 @@ public class Compressed_String_11 {
 //        System.out.println(ans);
 //    }
 //}
+
 // 2번 풀이
 //    Scanner sc = new Scanner(System.in);
 //    String str = sc.next();
