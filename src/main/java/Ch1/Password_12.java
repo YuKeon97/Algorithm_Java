@@ -19,7 +19,6 @@ public class Password_12 {
     }
 }
 
-
 //package Ch1;
 //
 //        import java.util.Scanner;
