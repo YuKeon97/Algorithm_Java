@@ -2,7 +2,7 @@ package Ch1;
 
 import java.util.Scanner;
 
-public class Shortest_Word_Length {
+public class Shortest_Word_Length_10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();

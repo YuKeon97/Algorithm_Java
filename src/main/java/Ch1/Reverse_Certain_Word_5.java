@@ -3,7 +3,7 @@ package Ch1;
 
 import java.util.Scanner;
 
-public class Reverse_Certain_Word {
+public class Reverse_Certain_Word_5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         char[] ans = sc.next().toCharArray();

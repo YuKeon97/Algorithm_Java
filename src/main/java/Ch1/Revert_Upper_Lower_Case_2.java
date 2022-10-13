@@ -1,9 +1,8 @@
 package Ch1;
 
-import java.util.Locale;
 import java.util.Scanner;
 
-public class Revert_Upper_Lower_Case {
+public class Revert_Upper_Lower_Case_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();

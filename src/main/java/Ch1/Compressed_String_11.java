@@ -2,7 +2,7 @@ package Ch1;
 
 import java.util.Scanner;
 
-public class Compressed_String {
+public class Compressed_String_11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next() + " ";

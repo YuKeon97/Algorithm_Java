@@ -1,9 +1,8 @@
 package Ch1;
 
-import java.util.Locale;
 import java.util.Scanner;
 
-public class Palindrome_String {
+public class Palindrome_String_7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine().toLowerCase();
