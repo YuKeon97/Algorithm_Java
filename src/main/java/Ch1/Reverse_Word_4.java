@@ -1,5 +1,4 @@
 // 10.11 복습(1)
-
 package Ch1;
 
 import java.util.Scanner;
