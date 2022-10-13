@@ -15,7 +15,7 @@ public class Remove_Duplicate_Word_6 {
             }
 
         }
-        System.out.println(ans);
 
+        System.out.println(ans);
     }
 }
