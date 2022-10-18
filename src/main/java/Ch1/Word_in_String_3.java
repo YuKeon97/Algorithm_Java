@@ -7,14 +7,14 @@ public class Word_in_String_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
-        String[] s = str.split(" ");
+        String[] tmp = str.split(" ");
         int max = 0;
         String ans = "";
 
-        for (String x : s) {
-            if (x.length() > max) {
-                max = x.length();
-                ans = x;
+        for (String s : tmp) {
+            if (max < s.length()) {
+                max = s.length();
+                ans = s;
             }
         }
         System.out.println(ans);
