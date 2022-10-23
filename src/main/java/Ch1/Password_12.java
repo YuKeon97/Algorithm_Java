@@ -15,7 +15,7 @@ public class Password_12 {
             ans += (char) num;
             str = str.substring(7);
         }
-        System.out.println(ans);
+        System.out.print(ans);
     }
 }
 
