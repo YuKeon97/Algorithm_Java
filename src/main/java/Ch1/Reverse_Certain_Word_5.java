@@ -6,25 +6,26 @@ import java.util.Scanner;
 public class Reverse_Certain_Word_5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        char[] ans = sc.next().toCharArray();
-        int ri;
-        int li;
-        li = 0;
-        ri = ans.length - 1;
+        char[] str = sc.next().toCharArray();
 
-        while (ri > li) {
-            if (!Character.isAlphabetic(ans[ri])) ri--;
-            else if (!Character.isAlphabetic(ans[li])) li++;
+        int ri = str.length - 1;
+        int li = 0;
+        char tmp;
+
+        while (li < ri) {
+            if (!Character.isAlphabetic(str[li])) li++;
+            else if (!Character.isAlphabetic(str[ri])) ri--;
             else {
-                char tmp = ans[ri];
-                ans[ri] = ans[li];
-                ans[li] = tmp;
-                ri--;
+                tmp = str[li];
+                str[li] = str[ri];
+                str[ri] = tmp;
                 li++;
+                ri--;
             }
         }
-        for(char x : ans) {
-            System.out.print(x);
+
+        for (char c : str) {
+            System.out.print(c);
         }
     }
 }
