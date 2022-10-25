@@ -1,11 +1,9 @@
 package Ch3;
 
 import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
 import java.util.Scanner;
 
-public class Combining_Two_Arrays {
+public class Combining_Two_Arrays_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         ArrayList<Integer> ans = new ArrayList<>();
