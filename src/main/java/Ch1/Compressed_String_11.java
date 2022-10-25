@@ -6,19 +6,20 @@ public class Compressed_String_11 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next()+" ";
-        String ans = "";
         int cnt = 1;
+        String ans = "";
 
         for (int i = 0; i < str.length()-1; i++) {
             if (str.charAt(i) == str.charAt(i + 1)) {
                 cnt++;
             } else {
-                if (cnt > 1) {
+                if (cnt == 1) {
                     ans += str.charAt(i);
-                    ans += cnt;
                     cnt = 1;
                 } else {
                     ans += str.charAt(i);
+                    ans += cnt;
+                    cnt = 1;
                 }
             }
         }
