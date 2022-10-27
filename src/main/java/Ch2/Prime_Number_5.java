@@ -7,22 +7,20 @@ public class Prime_Number_5 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];
-        for (int i = 2; i < n; i++) {
-
-        }
         int cnt = 0;
-
-        for (int i = 2; i <= n; i++) {
+        for (int i = 2; i < n; i++) {
             if (arr[i] == 0) {
                 cnt++;
-                for (int j = i; j <= n; j += i) {
+                for (int j = i; j < n; j+=i) {
                     arr[j] = 1;
                 }
             }
         }
         System.out.println(cnt);
+
     }
 }
+
 
 
 //package Ch2;
