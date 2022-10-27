@@ -16,19 +16,20 @@ public class Reverse_Prime_Number_6 {
         }
 
         for (int i = 0; i < n; i++) {
-            if (arr[i] == 1) {
-                continue;
-            }
-            boolean flag = true;
-            for (int j = 2; j < arr[i]; j++) {
-                if (arr[i] == 2) ans.add(arr[i]);
-                if (arr[i] % j == 0) {
-                    flag = false;
-                    break;
-                }
-            }
-            if (flag) {
+            if (arr[i] == 1) continue;
+            if (arr[i] == 2) {
                 ans.add(arr[i]);
+            } else {
+                boolean flag = true;
+                for (int j = 2; j < arr[i]; j++) {
+                    if (arr[i] % j == 0) {
+                        flag = false;
+                        break;
+                    }
+                }
+                if (flag) {
+                    ans.add(arr[i]);
+                }
             }
         }
         for (Integer an : ans) {
@@ -36,6 +37,7 @@ public class Reverse_Prime_Number_6 {
         }
     }
 }
+
 
 
 
