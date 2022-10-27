@@ -7,11 +7,11 @@ public class Decide_Interim_Leader_11 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[][] arr = new int[n+1][6];
-        int cnt;
-        int max = Integer.MIN_VALUE;
+        int cnt = 0;
+        int max = 0;
         int ans = 0;
 
-        for (int i = 1; i <= n; i++) { // i : 행(학생) j : 열(학년)
+        for (int i = 1; i <= n; i++) {
             for (int j = 1; j < 6; j++) {
                 arr[i][j] = sc.nextInt();
             }
@@ -30,6 +30,7 @@ public class Decide_Interim_Leader_11 {
             if (cnt > max) {
                 max = cnt;
                 ans = i;
+
             }
         }
         System.out.println(ans);
