@@ -7,26 +7,23 @@ public class Reverse_Certain_Word_5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         char[] str = sc.next().toCharArray();
+        int lc = 0, rc = str.length-1;
 
-        int ri = str.length - 1;
-        int li = 0;
-        char tmp;
-
-        while (li < ri) {
-            if (!Character.isAlphabetic(str[li])) li++;
-            else if (!Character.isAlphabetic(str[ri])) ri--;
-            else {
-                tmp = str[li];
-                str[li] = str[ri];
-                str[ri] = tmp;
-                li++;
-                ri--;
-            }
+        while(lc<rc) {
+            if(Character.isAlphabetic(str[lc])) {
+                if(Character.isAlphabetic(str[rc])) {
+                    char tmp = str[lc];
+                    str[lc] = str[rc];
+                    str[rc] = tmp;
+                    lc++;
+                    rc--;
+                } else rc--;
+            } else lc++;
+        }
+        for(char x : str) {
+            System.out.print(x);
         }
 
-        for (char c : str) {
-            System.out.print(c);
-        }
     }
 }
 
