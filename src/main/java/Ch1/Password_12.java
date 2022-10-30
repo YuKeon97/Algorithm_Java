@@ -9,7 +9,7 @@ public class Password_12 {
         String str = sc.next();
         String ans = "";
 
-        for (int i = 0; i < n; i++) {
+        for(int i = 0; i<n; i++) {
             String tmp = str.substring(0, 7).replace('#', '1').replace('*', '0');
             int num = Integer.parseInt(tmp, 2);
             ans += (char) num;
@@ -18,6 +18,7 @@ public class Password_12 {
         System.out.print(ans);
     }
 }
+
 
 
 //package Ch1;
