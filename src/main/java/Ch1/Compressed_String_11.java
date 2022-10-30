@@ -9,14 +9,11 @@ public class Compressed_String_11 {
         int cnt = 1;
         String ans = "";
 
-        for (int i = 0; i < str.length()-1; i++) {
-            if (str.charAt(i) == str.charAt(i + 1)) {
-                cnt++;
-            } else {
-                if (cnt == 1) {
-                    ans += str.charAt(i);
-                    cnt = 1;
-                } else {
+        for(int i = 0; i<str.length()-1; i++) {
+            if(str.charAt(i)==str.charAt(i+1)) cnt++;
+            else {
+                if(cnt == 1) ans += str.charAt(i);
+                else {
                     ans += str.charAt(i);
                     ans += cnt;
                     cnt = 1;
@@ -26,6 +23,7 @@ public class Compressed_String_11 {
         System.out.println(ans);
     }
 }
+
 
 // 1번 풀이
 //package Ch1;
