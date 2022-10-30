@@ -1,5 +1,4 @@
 package Ch1;
-
 import java.util.Scanner;
 
 public class Palindrome_String_7 {
