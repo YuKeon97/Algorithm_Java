@@ -7,34 +7,34 @@ public class Shortest_Word_Length_10 {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
         char chr = sc.next().charAt(0);
-        int[] ans = new int[str.length()];
         int cnt = 1000;
+        int[] ans = new int[str.length()];
 
-        for (int i = 0; i < str.length(); i++) {
-            if (str.charAt(i) == chr) {
-                cnt = 0;
-            } else {
+        for(int i = 0; i<str.length(); i++) {
+            if(str.charAt(i)!=chr) {
                 cnt++;
+                ans[i] = cnt;
+            } else {
+                cnt = 0;
             }
-            ans[i] = cnt;
         }
-
         cnt = 1000;
 
-        for (int i = str.length()-1; i >= 0; i--) {
-            if (str.charAt(i) == chr) {
-                cnt = 0;
-            } else {
+        for(int i = str.length()-1; i >= 0; i--) {
+            if(str.charAt(i)!=chr) {
                 cnt++;
+                if(cnt < ans[i]) { //Math.min으로도 가능
+                    ans[i] = cnt;
+                }
+            } else {
+                cnt = 0;
             }
-            ans[i] = Math.min(ans[i], cnt);
         }
-        for (int i : ans) {
+        for(int i : ans) {
             System.out.print(i+" ");
         }
     }
 }
-
 
 
 
