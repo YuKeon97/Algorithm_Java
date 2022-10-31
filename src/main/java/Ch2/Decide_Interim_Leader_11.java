@@ -30,7 +30,6 @@ public class Decide_Interim_Leader_11 {
             if (cnt > max) {
                 max = cnt;
                 ans = i;
-
             }
         }
         System.out.println(ans);
