@@ -8,35 +8,29 @@ public class Reverse_Prime_Number_6 {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int[] arr = new int[n];
-        ArrayList<Integer> ans = new ArrayList<>();
+        ArrayList<Integer> ans = new ArrayList();
 
-        for (int i = 0; i < n; i++) {
+        for(int i = 0; i<n; i++) {
             String tmp = new StringBuilder(sc.next()).reverse().toString();
             arr[i] = Integer.parseInt(tmp);
         }
 
-        for (int i = 0; i < n; i++) {
-            if (arr[i] == 1) continue;
-            if (arr[i] == 2) {
-                ans.add(arr[i]);
-            } else {
-                boolean flag = true;
-                for (int j = 2; j < arr[i]; j++) {
-                    if (arr[i] % j == 0) {
-                        flag = false;
-                        break;
-                    }
-                }
-                if (flag) {
-                    ans.add(arr[i]);
+        for(int i = 0; i<n; i++) {
+            boolean flag = true;
+            if(arr[i]==1) continue;
+            for(int j = 2; j<arr[i]; j++) {
+                if(arr[i]%j==0) {
+                    flag = false;
+                    break;
                 }
             }
+            if(flag) ans.add(arr[i]);
         }
-        for (Integer an : ans) {
-            System.out.print(an+" ");
-        }
+        for(int i :ans) System.out.print(i+" ");
     }
 }
+
+
 
 
 
