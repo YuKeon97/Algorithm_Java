@@ -5,28 +5,22 @@ import java.util.Scanner;
 public class Maximum_Sales_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int day = sc.nextInt();
         int n = sc.nextInt();
-        int[] arr = new int[day];
-
-        for (int i = 0; i < day; i++) {
-            arr[i] = sc.nextInt();
-        }
-
-        int sum = 0;
+        int k = sc.nextInt();
         int max = 0;
+        int sum = 0;
+        int[] arr = new int[n];
+        for(int i = 0; i<n; i++) arr[i] = sc.nextInt();
 
-        for (int i = 0; i < n; i++) {
-            sum += arr[i];
-        }
+        for(int i = 0; i<k; i++) sum += arr[i];
 
         max = sum;
 
-
-        for (int i = n; i < day; i++) {
-            sum = sum + arr[i] - arr[i - n];
+        for(int i = k; i<n; i++) {
+            sum = sum + arr[i] - arr[i-k];
             max = Math.max(max, sum);
         }
-        System.out.println(sum);
+        System.out.println(max);
     }
 }
+
