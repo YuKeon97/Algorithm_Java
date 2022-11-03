@@ -8,12 +8,8 @@ public class Max_Length_Continuous_Subsequence_6 {
         int n = sc.nextInt();
         int k = sc.nextInt();
         int[] arr = new int[n];
-        int ans = 0;
-        int cnt = 0, lt = 0;
-
-        for(int i = 0; i<n; i++) {
-            arr[i] = sc.nextInt();
-        }
+        int lt = 0, cnt = 0, ans = 0;
+        for(int i = 0; i<n; i++) arr[i] = sc.nextInt();
 
         for(int rt = 0; rt<n; rt++) {
             if(arr[rt]==0) cnt++;
@@ -24,6 +20,6 @@ public class Max_Length_Continuous_Subsequence_6 {
             ans = Math.max(ans, rt-lt+1);
         }
         System.out.println(ans);
-
     }
 }
+
