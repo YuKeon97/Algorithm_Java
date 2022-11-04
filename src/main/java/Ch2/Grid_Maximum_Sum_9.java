@@ -16,7 +16,6 @@ public class Grid_Maximum_Sum_9 {
                 arr[i][j] = sc.nextInt();
             }
         }
-
         for(int i = 0; i < n; i++) {
             sum1 = sum2 = 0;
             for(int j = 0; j < n; j++) {
@@ -26,9 +25,7 @@ public class Grid_Maximum_Sum_9 {
             max = Math.max(max, sum1);
             max = Math.max(max, sum2);
         }
-
         sum1 = sum2 = 0;
-
         for(int i = 0; i < n; i++) {
             sum1 += arr[i][i];
             sum2 += arr[i][n-i-1];
