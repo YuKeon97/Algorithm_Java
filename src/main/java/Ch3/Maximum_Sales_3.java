@@ -6,21 +6,21 @@ public class Maximum_Sales_3 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int k = sc.nextInt();
-        int max = 0;
-        int sum = 0;
+        int m = sc.nextInt();
         int[] arr = new int[n];
         for(int i = 0; i<n; i++) arr[i] = sc.nextInt();
 
-        for(int i = 0; i<k; i++) sum += arr[i];
+        int lt = 0, rt = m, sum = 0;
 
-        max = sum;
+        for(int i = 0; i<m; i++) sum += arr[i];
+        int max = sum;
 
-        for(int i = k; i<n; i++) {
-            sum = sum + arr[i] - arr[i-k];
+        while(rt<arr.length) {
+            sum = sum + arr[rt++] - arr[lt++];
             max = Math.max(max, sum);
         }
         System.out.println(max);
     }
 }
+
 
