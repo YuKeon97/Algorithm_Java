@@ -5,16 +5,17 @@ import java.util.Scanner;
 public class Class_President_1 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int max = 0;
-        char ans = ' ';
         int n = sc.nextInt();
         String str = sc.next();
+        int max = 0;
+        char ans = ' ';
+
         HashMap<Character, Integer> map = new HashMap<>();
 
-        for(int i = 0; i<n; i++) map.put(str.charAt(i), map.getOrDefault(str.charAt(i), 0)+1);
+        for(char x : str.toCharArray()) map.put(x, map.getOrDefault(x, 0)+1);
 
         for(char key : map.keySet()) {
-            if(map.get(key)>max) {
+            if(max < map.get(key)) {
                 max = map.get(key);
                 ans = key;
             }
