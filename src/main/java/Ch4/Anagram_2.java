@@ -6,27 +6,23 @@ import java.util.Scanner;
 public class Anagram_2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        HashMap<Character, Integer> map = new HashMap<>();
-
         String str1 = sc.next();
         String str2 = sc.next();
+        HashMap<Character, Integer> map = new HashMap<>();
 
-        for(int i = 0; i<str1.length(); i++) {
-            map.put(str1.charAt(i), map.getOrDefault(str1.charAt(i), 0)+1);
-        }
+        for(char x : str1.toCharArray()) map.put(x, map.getOrDefault(x, 0)+1);
 
-        boolean flag = true;
-        for(char key : str2.toCharArray()) {
-            if(!map.containsKey(key) || map.get(key) == 0) {
-                flag = false;
-                break;
+        for(char x : str2.toCharArray()) {
+            if(!map.containsKey(x) || map.get(x)==0) {
+                System.out.println("NO");
+                System.exit(0);
             }
-            map.put(key, map.get(key)-1);
+            map.put(x, map.getOrDefault(x, 0)-1);
         }
-        if(flag) System.out.println("YES");
-        else System.out.println("NO");
+        System.out.println("YES");
     }
 }
+
 
 /**HashMap 두 개*/
 //    public static void main(String[] args) {
