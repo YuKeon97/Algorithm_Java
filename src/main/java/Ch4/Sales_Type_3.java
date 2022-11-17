@@ -13,7 +13,6 @@ public class Sales_Type_3 {
         int k = sc.nextInt();
         int[] arr = new int[n];
 
-
         for(int i = 0; i<n; i++) arr[i] = sc.nextInt();
 
         for(int i = 0; i<k-1; i++) map.put(arr[i], map.getOrDefault(arr[i], 0)+1);
