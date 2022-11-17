@@ -10,15 +10,14 @@ public class Bubble_Sort_2 {
         for(int i = 0; i<n; i++) arr[i] = sc.nextInt();
 
         for (int i = 0; i < n - 1; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
-                if (arr[j] > arr[j + 1]) {
+            for (int j = 1; j < n; j++) {
+                while (arr[j] < arr[i]) {
                     int tmp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = tmp;
+                    arr[j] = arr[i];
+                    arr[i] = tmp;
                 }
             }
         }
-        for (int i : arr) System.out.print("i ");
     }
 }
 
