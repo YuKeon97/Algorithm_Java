@@ -13,6 +13,15 @@ public class Binary_Search_8 {
         for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
         Arrays.sort(arr);
 
-        System.out.println(Arrays.asList(arr).indexOf(m));
+        int lt = 0, rt = n - 1;
+        while (lt <= rt) {
+            int mid = (lt + rt) / 2;
+            if (arr[mid] == m) {
+                System.out.println(mid + 1);
+                break;
+            }
+            if (arr[mid]>m) rt = mid - 1;
+            else lt = mid + 1;
+        }
     }
 }
