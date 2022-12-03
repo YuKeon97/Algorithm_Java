@@ -9,11 +9,8 @@ public class Class_President_1 {
         String str = sc.next();
         int max = 0;
         char ans = ' ';
-
         HashMap<Character, Integer> map = new HashMap<>();
-
         for(char x : str.toCharArray()) map.put(x, map.getOrDefault(x, 0)+1);
-
         for(char key : map.keySet()) {
             if(max < map.get(key)) {
                 max = map.get(key);

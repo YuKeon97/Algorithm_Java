@@ -9,7 +9,6 @@ public class Iron_Bar_5 {
         Stack<Character> stk = new Stack<>();
         String str = sc.next();
         int ans = 0;
-
         for(int i = 0; i<str.length(); i++) {
             if(str.charAt(i)=='(') {
                 stk.push('(');
@@ -19,7 +18,6 @@ public class Iron_Bar_5 {
                 else ans++;
             }
         }
-
         System.out.println(ans);
     }
 }
