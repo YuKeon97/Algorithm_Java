@@ -14,7 +14,6 @@ public class Reverse_Prime_Number_6 {
             String tmp = new StringBuilder(sc.next()).reverse().toString();
             arr[i] = Integer.parseInt(tmp);
         }
-
         for(int i = 0; i<n; i++) {
             boolean flag = true;
             if(arr[i]==1) continue;

@@ -8,7 +8,6 @@ public class Decide_Interim_Leader_11 {
         int n = sc.nextInt();
         int cnt = 0, max = 0, ans = 0;
         int[][] arr = new int[n+1][6];
-
         for(int i = 1; i<=n; i++) {
             for(int j = 1; j<=5; j++) {
                 arr[i][j] = sc.nextInt();
@@ -29,7 +28,6 @@ public class Decide_Interim_Leader_11 {
                     ans = i;
                 }
             }
-
         }
         System.out.println(ans);
     }
