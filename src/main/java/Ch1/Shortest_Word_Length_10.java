@@ -9,7 +9,6 @@ public class Shortest_Word_Length_10 {
         char chr = sc.next().charAt(0);
         int cnt = 1000;
         int[] ans = new int[str.length()];
-
         for(int i = 0; i<str.length(); i++) {
             if(str.charAt(i)!=chr) {
                 cnt++;
@@ -19,7 +18,6 @@ public class Shortest_Word_Length_10 {
             }
         }
         cnt = 1000;
-
         for(int i = str.length()-1; i >= 0; i--) {
             if(str.charAt(i)!=chr) {
                 cnt++;
