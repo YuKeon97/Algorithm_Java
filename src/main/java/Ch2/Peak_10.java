@@ -15,7 +15,6 @@ public class Peak_10 {
         }
         int[] dx = {-1, 0, 1, 0};
         int[] dy = {0, 1, 0, -1};
-
         for(int i = 0; i<n; i++) {
             for(int j = 0; j<n; j++) {
                 boolean flag = true;
@@ -30,7 +29,6 @@ public class Peak_10 {
             }
         }
         System.out.println(cnt);
-
     }
 }
 
