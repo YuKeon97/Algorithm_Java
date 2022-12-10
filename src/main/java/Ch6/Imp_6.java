@@ -11,9 +11,7 @@ public class Imp_6 {
 
         for (int i = 0; i < n; i++) arr[i] = sc.nextInt();
         int[] tmp = arr.clone();
-
         Arrays.sort(tmp);
-
         for (int i = 0; i < n; i++) {
             if (tmp[i] != arr[i]) System.out.print(i+1+" ");
         }
