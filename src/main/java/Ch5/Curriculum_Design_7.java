@@ -11,7 +11,6 @@ public class Curriculum_Design_7 {
         String str = sc.next();
         String k = sc.next();
         for(char x : str.toCharArray()) q.offer(x);
-
         for(char x : k.toCharArray()) {
             if(q.contains(x)) {
                 if(x!=q.poll()) {
@@ -22,7 +21,6 @@ public class Curriculum_Design_7 {
         }
         if(!q.isEmpty()) System.out.println("NO");
         else System.out.println("YES");
-
     }
 }
 
